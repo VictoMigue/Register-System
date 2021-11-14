@@ -4,15 +4,13 @@ write = None
 code = None
 canWriteCode = True
 
-ico_icon = PhotoImage(file = r'img_click.png')
-
 window = Tk()
 
-window.title('Sistema de Registro')
+window.title('Register System')
 window.resizable(False, False)
 
 lbl_message = Label(window,
-                    text = 'Defina sua senha:',
+                    text = 'Define your password:',
                     font = ('Consola', 20))
 
 ety_entry = Entry(window,
@@ -28,7 +26,7 @@ def Press_Button():
 
             code = entry
             
-            lbl_message.config(text = 'Digite sua senha:')           
+            lbl_message.config(text = 'Type your password:')           
             try:
                 btn_ok.config(text = 'Ok')
             except:
@@ -43,13 +41,13 @@ def Press_Button():
         write = ety_entry.get()
 
         if write == code:
-            lbl_message.config(text = 'Senha concedida!')
+            lbl_message.config(text = 'Correct password!')
         else:
-            lbl_message.config(text = 'Tente novamente...')
+            lbl_message.config(text = 'Try again...')
     pass
 
 btn_ok = Button(window,
-                text = 'Definir',
+                text = 'Define',
                 font = ('Consola', 20),
                 command = Press_Button)
 
